@@ -1,11 +1,11 @@
 # iDealMackolik
-Serie A tarzı bir lig ekranı. İki projeden oluşur: veri `iDealMackolikAPI` içindedir, sayfalar `iDealMackolicUI` içindedir. Arayüz, API’ye `https://localhost:7155` adresinden istek atar.
+Serie A tarzı bir lig ekranı. İki projeden oluşur: veri `iDealMackolikAPI` içindedir, sayfalar `iDealMackolicUI` içindedir. Arayüz, API’ye `https://localhost:XXX` adresinden istek atar.
 Hedef çerçeve .NET 6’dır.
 ## Projeler
 | Klasör | Ne işe yarar | Adres |
 |---|---|---|
-| `iDealMackolikAPI` | Entity Framework Core, SQL Server, Swagger | `https://localhost:7155` |
-| `iDealMackolicUI` | MVC arayüz. Sayfalar ViewComponent parçalarından kurulur | `https://localhost:7212` |
+| `iDealMackolikAPI` | Entity Framework Core, SQL Server, Swagger | `https://localhost:XXX` |
+| `iDealMackolicUI` | MVC arayüz. Sayfalar ViewComponent parçalarından kurulur | `https://localhost:XXX` |
 ## Çalıştırmak
 SQL Server’ın ayakta olması gerekir. Bağlantı cümlesi `iDealMackolikAPI/Context/ApiContext.cs` dosyasındaki `OnConfiguring` metodundadır. Kendi sunucu adını oraya yaz.
 Veritabanını ilk kez kurmak için API klasöründe:
@@ -17,7 +17,7 @@ Sonra iki projeyi ayrı terminallerde başlat:
 dotnet run --project iDealMackolikAPI
 dotnet run --project iDealMackolicUI
 ```
-API açılınca Swagger `https://localhost:7155/swagger` adresindedir. Arayüz `https://localhost:7212` adresindedir.
+API açılınca Swagger `https://localhost:XXX/swagger` adresindedir. Arayüz `https://localhost:XXX` adresindedir.
 API kapalıyken Takımlar, Maçlar, Puan Durumu ve maç detayı sayfaları view’a gelmeden hata verir. Bu sayfaların controller’ları önce API’ye istek atar.
 ## Arayüz sayfaları
 | Adres | Dosya | Ne gösterir |
