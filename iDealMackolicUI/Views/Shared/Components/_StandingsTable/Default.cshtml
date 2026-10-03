@@ -1,0 +1,314 @@
+@{
+	Layout = null;
+}
+
+<section class="table-panel" aria-labelledby="table-title">
+            <div class="table-toolbar">
+              <h2 class="table-toolbar__title" id="table-title">Genel sıralama</h2>
+              <div class="table-toolbar__controls">
+                <div class="zone-filter" role="group" aria-label="Bölgeye göre filtrele">
+                  <button type="button" class="zone-chip zone-chip--all" data-zone-filter="all" aria-pressed="true">Tümü</button>
+                  <button type="button" class="zone-chip zone-chip--ucl" data-zone-filter="ucl" aria-pressed="false">Şampiyonlar Ligi</button>
+                  <button type="button" class="zone-chip zone-chip--europe" data-zone-filter="europe" aria-pressed="false">Avrupa</button>
+                  <button type="button" class="zone-chip zone-chip--rel" data-zone-filter="rel" aria-pressed="false">Düşme hattı</button>
+                </div>
+                <label class="team-search">
+                  <span class="visually-hidden">Takım ara</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg>
+                  <input type="search" placeholder="Takım ara" autocomplete="off" data-team-search>
+                </label>
+              </div>
+            </div>
+
+            <div class="standings-table-wrap">
+              <table class="standings-table">
+                <caption class="visually-hidden">Serie A 2026/27, 12. hafta puan durumu</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-pos">#</th>
+                    <th scope="col" class="col-team">Takım</th>
+                    <th scope="col" class="col-num"><abbr title="Oynanan maç">O</abbr></th>
+                    <th scope="col" class="col-num"><abbr title="Galibiyet">G</abbr></th>
+                    <th scope="col" class="col-num"><abbr title="Beraberlik">B</abbr></th>
+                    <th scope="col" class="col-num"><abbr title="Mağlubiyet">M</abbr></th>
+                    <th scope="col" class="col-num col-hide-sm"><abbr title="Atılan gol">AG</abbr></th>
+                    <th scope="col" class="col-num col-hide-sm"><abbr title="Yenilen gol">YG</abbr></th>
+                    <th scope="col" class="col-gd"><abbr title="Averaj">AV</abbr></th>
+                    <th scope="col" class="col-pts">Puan</th>
+                    <th scope="col" class="col-form">Son 5 maç</th>
+                  </tr>
+                </thead>
+                <tbody>
+            <!-- Sıra satırları şablonda sabittir. API bağlanınca bu liste Model.Teams ile dolar. -->
+            <tr class="standings-row zone-ucl" data-team="inter" data-team-name="Inter" data-zone="ucl" tabindex="0">
+              <td class="col-pos">1</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#0A4FA8;--crest-b:#101418;--crest-ink:#fff" aria-hidden="true">INT</span><span class="team-name">Inter</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">8</td>
+              <td class="col-num">3</td>
+              <td class="col-num">1</td>
+              <td class="col-num col-hide-sm">26</td>
+              <td class="col-num col-hide-sm">10</td>
+              <td class="col-gd"><span class="gd is-pos">+16</span></td>
+              <td class="col-pts">27</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Galibiyet, Beraberlik, Galibiyet, Galibiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-ucl" data-team="napoli" data-team-name="Napoli" data-zone="ucl" tabindex="0">
+              <td class="col-pos">2</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#1E9BD7;--crest-b:#0C3C78;--crest-ink:#fff" aria-hidden="true">NAP</span><span class="team-name">Napoli</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">8</td>
+              <td class="col-num">2</td>
+              <td class="col-num">2</td>
+              <td class="col-num col-hide-sm">21</td>
+              <td class="col-num col-hide-sm">10</td>
+              <td class="col-gd"><span class="gd is-pos">+11</span></td>
+              <td class="col-pts">26</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Mağlubiyet, Galibiyet, Galibiyet, Beraberlik"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-ucl" data-team="milan" data-team-name="Milan" data-zone="ucl" tabindex="0">
+              <td class="col-pos">3</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#C8141E;--crest-b:#111;--crest-ink:#fff" aria-hidden="true">MIL</span><span class="team-name">Milan</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">7</td>
+              <td class="col-num">3</td>
+              <td class="col-num">2</td>
+              <td class="col-num col-hide-sm">21</td>
+              <td class="col-num col-hide-sm">12</td>
+              <td class="col-gd"><span class="gd is-pos">+9</span></td>
+              <td class="col-pts">24</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Galibiyet, Galibiyet, Mağlubiyet, Galibiyet"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-ucl edge-ucl" data-team="juventus" data-team-name="Juventus" data-zone="ucl" tabindex="0">
+              <td class="col-pos">4</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#16181D;--crest-b:#E8E8E8;--crest-ink:#fff" aria-hidden="true">JUV</span><span class="team-name">Juventus</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">6</td>
+              <td class="col-num">5</td>
+              <td class="col-num">1</td>
+              <td class="col-num col-hide-sm">19</td>
+              <td class="col-num col-hide-sm">9</td>
+              <td class="col-gd"><span class="gd is-pos">+10</span></td>
+              <td class="col-pts">23</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Galibiyet, Beraberlik, Galibiyet, Beraberlik"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-europe" data-team="como" data-team-name="Como" data-zone="europe" tabindex="0">
+              <td class="col-pos">5</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#0B3E91;--crest-b:#fff;--crest-ink:#fff" aria-hidden="true">COM</span><span class="team-name">Como</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">6</td>
+              <td class="col-num">4</td>
+              <td class="col-num">2</td>
+              <td class="col-num col-hide-sm">18</td>
+              <td class="col-num col-hide-sm">12</td>
+              <td class="col-gd"><span class="gd is-pos">+6</span></td>
+              <td class="col-pts">22</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Galibiyet, Beraberlik, Galibiyet, Mağlubiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-europe edge-europe" data-team="roma" data-team-name="Roma" data-zone="europe" tabindex="0">
+              <td class="col-pos">6</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#8E1F2F;--crest-b:#F0B323;--crest-ink:#fff" aria-hidden="true">ROM</span><span class="team-name">Roma</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">6</td>
+              <td class="col-num">3</td>
+              <td class="col-num">3</td>
+              <td class="col-num col-hide-sm">17</td>
+              <td class="col-num col-hide-sm">11</td>
+              <td class="col-gd"><span class="gd is-pos">+6</span></td>
+              <td class="col-pts">21</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Galibiyet, Galibiyet, Beraberlik, Galibiyet"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="lazio" data-team-name="Lazio" data-zone="mid" tabindex="0">
+              <td class="col-pos">7</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#8FD3F4;--crest-b:#fff;--crest-ink:#0B2A4A" aria-hidden="true">LAZ</span><span class="team-name">Lazio</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">6</td>
+              <td class="col-num">2</td>
+              <td class="col-num">4</td>
+              <td class="col-num col-hide-sm">16</td>
+              <td class="col-num col-hide-sm">13</td>
+              <td class="col-gd"><span class="gd is-pos">+3</span></td>
+              <td class="col-pts">20</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Mağlubiyet, Galibiyet, Mağlubiyet, Galibiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="atalanta" data-team-name="Atalanta" data-zone="mid" tabindex="0">
+              <td class="col-pos">8</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#1E6FB8;--crest-b:#111;--crest-ink:#fff" aria-hidden="true">ATA</span><span class="team-name">Atalanta</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">5</td>
+              <td class="col-num">4</td>
+              <td class="col-num">3</td>
+              <td class="col-num col-hide-sm">20</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-gd"><span class="gd is-pos">+6</span></td>
+              <td class="col-pts">19</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Galibiyet, Galibiyet, Beraberlik, Galibiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="fiorentina" data-team-name="Fiorentina" data-zone="mid" tabindex="0">
+              <td class="col-pos">9</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#5B2A86;--crest-b:#fff;--crest-ink:#fff" aria-hidden="true">FIO</span><span class="team-name">Fiorentina</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">5</td>
+              <td class="col-num">4</td>
+              <td class="col-num">3</td>
+              <td class="col-num col-hide-sm">15</td>
+              <td class="col-num col-hide-sm">13</td>
+              <td class="col-gd"><span class="gd is-pos">+2</span></td>
+              <td class="col-pts">19</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Beraberlik, Mağlubiyet, Galibiyet, Beraberlik"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="bologna" data-team-name="Bologna" data-zone="mid" tabindex="0">
+              <td class="col-pos">10</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#1A2F5A;--crest-b:#A21C26;--crest-ink:#fff" aria-hidden="true">BOL</span><span class="team-name">Bologna</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">5</td>
+              <td class="col-num">3</td>
+              <td class="col-num">4</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-gd"><span class="gd is-zero">0</span></td>
+              <td class="col-pts">18</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Galibiyet, Mağlubiyet, Beraberlik, Galibiyet"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="cagliari" data-team-name="Cagliari" data-zone="mid" tabindex="0">
+              <td class="col-pos">11</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#A5162B;--crest-b:#0E2A56;--crest-ink:#fff" aria-hidden="true">CAG</span><span class="team-name">Cagliari</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">3</td>
+              <td class="col-num">5</td>
+              <td class="col-num">4</td>
+              <td class="col-num col-hide-sm">13</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-gd"><span class="gd is-neg">-1</span></td>
+              <td class="col-pts">14</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Beraberlik, Galibiyet, Mağlubiyet, Beraberlik"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="sassuolo" data-team-name="Sassuolo" data-zone="mid" tabindex="0">
+              <td class="col-pos">12</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#00A651;--crest-b:#111;--crest-ink:#fff" aria-hidden="true">SAS</span><span class="team-name">Sassuolo</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">4</td>
+              <td class="col-num">2</td>
+              <td class="col-num">6</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-num col-hide-sm">18</td>
+              <td class="col-gd"><span class="gd is-neg">-4</span></td>
+              <td class="col-pts">14</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Mağlubiyet, Mağlubiyet, Galibiyet, Mağlubiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="torino" data-team-name="Torino" data-zone="mid" tabindex="0">
+              <td class="col-pos">13</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#7E1B1B;--crest-b:#E9D9B0;--crest-ink:#fff" aria-hidden="true">TOR</span><span class="team-name">Torino</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">3</td>
+              <td class="col-num">4</td>
+              <td class="col-num">5</td>
+              <td class="col-num col-hide-sm">12</td>
+              <td class="col-num col-hide-sm">15</td>
+              <td class="col-gd"><span class="gd is-neg">-3</span></td>
+              <td class="col-pts">13</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Beraberlik, Galibiyet, Mağlubiyet, Beraberlik"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="udinese" data-team-name="Udinese" data-zone="mid" tabindex="0">
+              <td class="col-pos">14</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#26282C;--crest-b:#fff;--crest-ink:#fff" aria-hidden="true">UDI</span><span class="team-name">Udinese</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">3</td>
+              <td class="col-num">4</td>
+              <td class="col-num">5</td>
+              <td class="col-num col-hide-sm">11</td>
+              <td class="col-num col-hide-sm">14</td>
+              <td class="col-gd"><span class="gd is-neg">-3</span></td>
+              <td class="col-pts">13</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Mağlubiyet, Mağlubiyet, Beraberlik, Galibiyet"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="frosinone" data-team-name="Frosinone" data-zone="mid" tabindex="0">
+              <td class="col-pos">15</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#1C4E9A;--crest-b:#FFD200;--crest-ink:#fff" aria-hidden="true">FRO</span><span class="team-name">Frosinone</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">3</td>
+              <td class="col-num">3</td>
+              <td class="col-num">6</td>
+              <td class="col-num col-hide-sm">12</td>
+              <td class="col-num col-hide-sm">17</td>
+              <td class="col-gd"><span class="gd is-neg">-5</span></td>
+              <td class="col-pts">12</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Galibiyet, Mağlubiyet, Beraberlik, Mağlubiyet, Mağlubiyet"><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li></ol></td>
+            </tr>
+            <tr class="standings-row" data-team="lecce" data-team-name="Lecce" data-zone="mid" tabindex="0">
+              <td class="col-pos">16</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#F6D000;--crest-b:#D21F26;--crest-ink:#3A1206" aria-hidden="true">LEC</span><span class="team-name">Lecce</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">3</td>
+              <td class="col-num">2</td>
+              <td class="col-num">7</td>
+              <td class="col-num col-hide-sm">10</td>
+              <td class="col-num col-hide-sm">16</td>
+              <td class="col-gd"><span class="gd is-neg">-6</span></td>
+              <td class="col-pts">11</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Mağlubiyet, Galibiyet, Mağlubiyet, Beraberlik"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row edge-rel" data-team="parma" data-team-name="Parma" data-zone="mid" tabindex="0">
+              <td class="col-pos">17</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#FFD200;--crest-b:#1D3E8A;--crest-ink:#10224A" aria-hidden="true">PAR</span><span class="team-name">Parma</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">2</td>
+              <td class="col-num">4</td>
+              <td class="col-num">6</td>
+              <td class="col-num col-hide-sm">11</td>
+              <td class="col-num col-hide-sm">18</td>
+              <td class="col-gd"><span class="gd is-neg">-7</span></td>
+              <td class="col-pts">10</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Beraberlik, Mağlubiyet, Beraberlik, Mağlubiyet, Galibiyet"><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--w" title="Galibiyet">G</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-rel" data-team="genoa" data-team-name="Genoa" data-zone="rel" tabindex="0">
+              <td class="col-pos">18</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#A2172E;--crest-b:#002B5C;--crest-ink:#fff" aria-hidden="true">GEN</span><span class="team-name">Genoa</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">2</td>
+              <td class="col-num">3</td>
+              <td class="col-num">7</td>
+              <td class="col-num col-hide-sm">10</td>
+              <td class="col-num col-hide-sm">19</td>
+              <td class="col-gd"><span class="gd is-neg">-9</span></td>
+              <td class="col-pts">9</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Beraberlik, Mağlubiyet, Mağlubiyet, Beraberlik"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-rel" data-team="monza" data-team-name="Monza" data-zone="rel" tabindex="0">
+              <td class="col-pos">19</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#D2122E;--crest-b:#fff;--crest-ink:#fff" aria-hidden="true">MON</span><span class="team-name">Monza</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">2</td>
+              <td class="col-num">2</td>
+              <td class="col-num">8</td>
+              <td class="col-num col-hide-sm">9</td>
+              <td class="col-num col-hide-sm">23</td>
+              <td class="col-gd"><span class="gd is-neg">-14</span></td>
+              <td class="col-pts">8</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Mağlubiyet, Beraberlik, Mağlubiyet, Mağlubiyet"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li></ol></td>
+            </tr>
+            <tr class="standings-row zone-rel" data-team="venezia" data-team-name="Venezia" data-zone="rel" tabindex="0">
+              <td class="col-pos">20</td>
+              <th scope="row" class="col-team"><div class="team-cell"><span class="team-crest" style="--crest-a:#141414;--crest-b:#F06A1A;--crest-ink:#fff" aria-hidden="true">VEN</span><span class="team-name">Venezia</span></div></th>
+              <td class="col-num">12</td>
+              <td class="col-num">1</td>
+              <td class="col-num">2</td>
+              <td class="col-num">9</td>
+              <td class="col-num col-hide-sm">8</td>
+              <td class="col-num col-hide-sm">25</td>
+              <td class="col-gd"><span class="gd is-neg">-17</span></td>
+              <td class="col-pts">5</td>
+              <td class="col-form"><ol class="form-list" aria-label="Son 5 maç, eskiden yeniye: Mağlubiyet, Mağlubiyet, Mağlubiyet, Beraberlik, Mağlubiyet"><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li><li><span class="form-badge form-badge--d" title="Beraberlik">B</span></li><li><span class="form-badge form-badge--l" title="Mağlubiyet">M</span></li></ol></td>
+            </tr>
+                  <tr class="empty-row" data-empty-row hidden>
+                    <td colspan="11"><strong>Bu filtreyle eşleşen takım yok</strong>Aramayı temizle ya da “Tümü” filtresini seç.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-foot">
+              <span>Gösterilen takım: <strong data-visible-count>20</strong> / 20</span>
+              <span>Son güncelleme: 22 Eylül 2026, 23:45</span>
+            </div>
+          </section>

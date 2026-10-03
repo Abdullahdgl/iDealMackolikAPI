@@ -1,0 +1,30 @@
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+	@await Component.InvokeAsync("_MatchDetailHead")
+<body class="match-page">
+	@await Component.InvokeAsync("_MatchIcons")
+	<main class="match-shell container-xl" data-match>
+		@await Component.InvokeAsync("_MatchHero")
+		<div class="match-body">
+			<div class="row g-4">
+				<div class="col-lg-8">
+					@await Component.InvokeAsync("_MatchTimeline")
+					@await Component.InvokeAsync("_GoalsPanel")
+					@await Component.InvokeAsync("_CardsPanel")
+					@await Component.InvokeAsync("_SubstitutionsPanel")
+				</div>
+				<aside class="col-lg-4 side-col" aria-label="Maç özeti ve istatistikler">
+					@await Component.InvokeAsync("_PeriodScoreCards")
+					@await Component.InvokeAsync("_MatchStats")
+					@await Component.InvokeAsync("_MatchInfoCard")
+				</aside>
+			</div>
+		</div>
+		<p class="page-note">Sayfadaki veriler demo amaçlıdır.</p>
+	</main>
+	@await Component.InvokeAsync("_MatchDetailScript")
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+	@await Component.InvokeAsync("_AdminLayoutHead")
+<body class="admin">
+	@await Component.InvokeAsync("_AdminIcons")
+	@await Component.InvokeAsync("_NavBar")
+	<div class="sidebar-backdrop" data-sidebar-close></div>
+
+	<div class="admin-main">
+		@await Component.InvokeAsync("_AdminTopbar")
+		<main class="admin-content">
+			@RenderBody()
+		</main>
+	</div>
+
+	@await Component.InvokeAsync("_AdminLayoutScript")
+</body>
+</html>

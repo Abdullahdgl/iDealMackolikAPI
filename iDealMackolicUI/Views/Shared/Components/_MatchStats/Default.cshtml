@@ -1,0 +1,65 @@
+@{
+	Layout = null;
+}
+
+<section class="panel" aria-labelledby="stats-title">
+            <div class="panel__head">
+              <h2 class="panel__title" id="stats-title">İstatistikler</h2>
+              <div class="stats-teams" aria-hidden="true">
+                <span><span class="team-crest team-crest--xs crest-milan">MIL</span>Milan</span>
+                <span>Roma<span class="team-crest team-crest--xs crest-roma">ROM</span></span>
+              </div>
+            </div>
+
+            <div class="possession">
+              <div class="possession__row">
+                <span class="possession__value">%54</span>
+                <span class="possession__label">Topa sahip olma</span>
+                <span class="possession__value possession__value--away">%46</span>
+              </div>
+              <div class="possession__bar" aria-hidden="true">
+                <span style="flex:54;background:var(--home)"></span>
+                <span style="flex:46;background:var(--away)"></span>
+              </div>
+            </div>
+
+            <!-- Razor: her satır için --w = değer / (ev + dep) -->
+            <ul class="stat-list">
+              <li class="stat-row">
+                <div class="stat-row__values"><span class="stat-val is-lead">15</span><span class="stat-row__label">Şut</span><span class="stat-val stat-val--away">10</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(60% - 2px)"></span><span class="bar-away" style="--w:calc(40% - 2px)"></span></div>
+              </li>
+              <li class="stat-row">
+                <div class="stat-row__values"><span class="stat-val is-lead">7</span><span class="stat-row__label">İsabetli şut</span><span class="stat-val stat-val--away">4</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(63.6% - 2px)"></span><span class="bar-away" style="--w:calc(36.4% - 2px)"></span></div>
+              </li>
+              <li class="stat-row">
+                <div class="stat-row__values"><span class="stat-val is-lead">512</span><span class="stat-row__label">Pas</span><span class="stat-val stat-val--away">438</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(53.9% - 2px)"></span><span class="bar-away" style="--w:calc(46.1% - 2px)"></span></div>
+              </li>
+              <li class="stat-row">
+                <div class="stat-row__values"><span class="stat-val is-lead">%87</span><span class="stat-row__label">Pas isabeti</span><span class="stat-val stat-val--away">%82</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(51.5% - 2px)"></span><span class="bar-away" style="--w:calc(48.5% - 2px)"></span></div>
+              </li>
+              <li class="stat-row">
+                <div class="stat-row__values"><span class="stat-val is-lead">6</span><span class="stat-row__label">Korner</span><span class="stat-val stat-val--away">4</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(60% - 2px)"></span><span class="bar-away" style="--w:calc(40% - 2px)"></span></div>
+              </li>
+              <li class="stat-row stat-row--muted">
+                <div class="stat-row__values"><span class="stat-val">11</span><span class="stat-row__label">Faul</span><span class="stat-val stat-val--away is-lead">13</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(45.8% - 2px)"></span><span class="bar-away" style="--w:calc(54.2% - 2px)"></span></div>
+              </li>
+              <li class="stat-row stat-row--muted">
+                <div class="stat-row__values"><span class="stat-val is-lead">2</span><span class="stat-row__label">Ofsayt</span><span class="stat-val stat-val--away">1</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(66.7% - 2px)"></span><span class="bar-away" style="--w:calc(33.3% - 2px)"></span></div>
+              </li>
+              <li class="stat-row stat-row--muted">
+                <div class="stat-row__values"><span class="stat-val">2</span><span class="stat-row__label">Sarı kart</span><span class="stat-val stat-val--away is-lead">3</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:calc(40% - 2px)"></span><span class="bar-away" style="--w:calc(60% - 2px)"></span></div>
+              </li>
+              <li class="stat-row stat-row--muted">
+                <div class="stat-row__values"><span class="stat-val">0</span><span class="stat-row__label">Kırmızı kart</span><span class="stat-val stat-val--away is-lead">1</span></div>
+                <div class="stat-bar" aria-hidden="true"><span class="bar-home" style="--w:0%"></span><span class="bar-away" style="--w:100%"></span></div>
+              </li>
+            </ul>
+          </section>

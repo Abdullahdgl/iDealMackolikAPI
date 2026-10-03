@@ -1,0 +1,26 @@
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+	@await Component.InvokeAsync("_StandingsHead")
+	<h1>--------------------Lig Serisi bizden sorulur</h1>
+	<br />
+	<br />
+
+<body class="standings-page">
+	<main class="standings-shell container-xl" data-standings>
+		@await Component.InvokeAsync("_StandingsHero")
+		@await Component.InvokeAsync("_SummaryCards")
+		<div class="standings-body">
+			<div class="row g-4">
+				<div class="col-xl-9">
+					@await Component.InvokeAsync("_StandingsTable")
+				</div>
+				@await Component.InvokeAsync("_StandingsSidebar")
+			</div>
+		</div>
+	</main>
+	@await Component.InvokeAsync("_StandingsScript")
+</body>
+</html>

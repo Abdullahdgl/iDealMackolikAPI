@@ -1,0 +1,145 @@
+@{
+	Layout = null;
+}
+
+<section class="panel" aria-labelledby="timeline-title">
+            <div class="panel__head">
+              <h2 class="panel__title" id="timeline-title">Maç olayları</h2>
+              <div class="event-filter" role="group" aria-label="Olay türüne göre filtrele">
+                <button type="button" class="chip" data-event-filter="all" aria-pressed="true">Tümü</button>
+                <button type="button" class="chip" data-event-filter="goal" aria-pressed="false">Goller</button>
+                <button type="button" class="chip" data-event-filter="card" aria-pressed="false">Kartlar</button>
+                <button type="button" class="chip" data-event-filter="sub" aria-pressed="false">Değişiklikler</button>
+              </div>
+            </div>
+
+            <div class="timeline-legend" aria-hidden="true">
+              <span><span class="team-crest team-crest--xs crest-milan">MIL</span>Milan</span>
+              <span></span>
+              <span>Roma<span class="team-crest team-crest--xs crest-roma">ROM</span></span>
+            </div>
+
+            <!-- Olay satırları şablonda sabittir. API bağlanınca bu liste Model.Events ile dolar. -->
+            <ol class="timeline">
+              <li class="event event--period"><span class="period-mark">Başlama düdüğü</span></li>
+
+              <li class="event event--home event--goal" id="ev-14" data-type="goal">
+                <span class="event__minute">14'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player">Rafael Leão</span><span class="event-card__meta">Gol, asist: Theo Hernández</span></span>
+                  <span class="event-score">1-0</span>
+                </div>
+              </li>
+
+              <li class="event event--away event--yellow" id="ev-27" data-type="card">
+                <span class="event__minute">27'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--yellow"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Paulo Dybala</span><span class="event-card__meta">Sarı kart, faul</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--goal" id="ev-41" data-type="goal">
+                <span class="event__minute">41'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player">Olivier Giroud</span><span class="event-card__meta">Gol, kafa, asist: Rafael Leão</span></span>
+                  <span class="event-score">2-0</span>
+                </div>
+              </li>
+
+              <li class="event event--period"><span class="period-mark">Devre arası <strong>2-0</strong></span></li>
+
+              <li class="event event--away event--yellow" id="ev-54" data-type="card">
+                <span class="event__minute">54'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--yellow"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Bryan Cristante</span><span class="event-card__meta">Sarı kart, taktik faul</span></span>
+                </div>
+              </li>
+
+              <li class="event event--away event--sub" id="ev-58" data-type="sub">
+                <span class="event__minute">58'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-swap"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player sub-in">Lorenzo Pellegrini</span><span class="event-card__meta sub-out">Stephan El Shaarawy</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--sub" id="ev-64" data-type="sub">
+                <span class="event__minute">64'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-swap"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player sub-in">Christian Pulisic</span><span class="event-card__meta sub-out">Samuel Chukwueze</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--yellow" id="ev-67" data-type="card">
+                <span class="event__minute">67'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--yellow"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Fikayo Tomori</span><span class="event-card__meta">Sarı kart, faul</span></span>
+                </div>
+              </li>
+
+              <li class="event event--away event--goal" id="ev-72" data-type="goal">
+                <span class="event__minute">72'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player">Tammy Abraham</span><span class="event-card__meta">Gol, asist: Lorenzo Pellegrini</span></span>
+                  <span class="event-score">2-1</span>
+                </div>
+              </li>
+
+              <li class="event event--away event--yellow" id="ev-74" data-type="card">
+                <span class="event__minute">74'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--yellow"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Gianluca Mancini</span><span class="event-card__meta">Sarı kart, itiraz</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--sub" id="ev-78" data-type="sub">
+                <span class="event__minute">78'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-swap"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player sub-in">Yunus Musah</span><span class="event-card__meta sub-out">Ruben Loftus-Cheek</span></span>
+                </div>
+              </li>
+
+              <li class="event event--away event--sub" id="ev-79" data-type="sub">
+                <span class="event__minute">79'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-swap"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player sub-in">Andrea Belotti</span><span class="event-card__meta sub-out">Tammy Abraham</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--yellow" id="ev-83" data-type="card">
+                <span class="event__minute">83'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--yellow"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Theo Hernández</span><span class="event-card__meta">Sarı kart, oyunu geciktirme</span></span>
+                </div>
+              </li>
+
+              <li class="event event--home event--sub" id="ev-88" data-type="sub">
+                <span class="event__minute">88'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-swap"/></svg></span>
+                  <span class="event-card__body"><span class="event-card__player sub-in">Noah Okafor</span><span class="event-card__meta sub-out">Rafael Leão</span></span>
+                </div>
+              </li>
+
+              <li class="event event--away event--red" id="ev-90" data-type="card">
+                <span class="event__minute">90+2'</span>
+                <div class="event-card">
+                  <span class="event-card__icon"><span class="i-card i-card--red"></span></span>
+                  <span class="event-card__body"><span class="event-card__player">Diego Llorente</span><span class="event-card__meta">Kırmızı kart, gol şansını engelleme</span></span>
+                </div>
+              </li>
+
+              <li class="event event--period"><span class="period-mark">Maç sonu <strong>2-1</strong></span></li>
+            </ol>
+          </section>

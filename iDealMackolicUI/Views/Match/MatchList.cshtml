@@ -1,0 +1,31 @@
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+	@await Component.InvokeAsync("_FixturesHead")
+<body class="fixtures-page">
+	<main class="fixtures-shell container-xl" data-fixtures-page data-current-week="12">
+		@await Component.InvokeAsync("_FixturesHero")
+		@await Component.InvokeAsync("_WeekSelector")
+		@await Component.InvokeAsync("_WeekInfo")
+
+		<div class="fixtures-body">
+			<div class="row g-4">
+				<div class="col-lg-8">
+					@await Component.InvokeAsync("_FixturesList")
+				</div>
+				<aside class="col-lg-4" aria-label="Haftanın özeti ve öne çıkan maç">
+					<div class="side-stack">
+						@await Component.InvokeAsync("_WeeklySummary")
+						@await Component.InvokeAsync("_FeaturedMatch")
+					</div>
+				</aside>
+			</div>
+		</div>
+
+		<p class="page-note">Sayfadaki veriler demo amaçlıdır.</p>
+	</main>
+	@await Component.InvokeAsync("_FixturesScript")
+</body>
+</html>

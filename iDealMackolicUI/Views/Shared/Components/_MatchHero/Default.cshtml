@@ -1,0 +1,54 @@
+@{
+	Layout = null;
+}
+
+<header class="match-hero">
+      <div class="hero-topbar">
+        <ul class="comp-tags" aria-label="Müsabaka">
+          <li class="comp-tag comp-tag--league">Serie A</li>
+          <li class="comp-tag">2026/27</li>
+          <li class="comp-tag">Hafta 12</li>
+        </ul>
+        <span class="status-pill">Maç bitti</span>
+      </div>
+
+      <div class="scoreboard">
+        <div class="sb-team sb-team--home">
+          <span class="team-crest team-crest--xl crest-milan" aria-hidden="true">MIL</span>
+          <div>
+            <span class="sb-team__role">Ev sahibi</span>
+            <h1 class="sb-team__name">Milan</h1>
+            <ul class="sb-scorers" aria-label="Milan golleri">
+              <li><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg>Rafael Leão 14'</li>
+              <li><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg>Olivier Giroud 41'</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sb-score">
+          <p class="sb-score__value" aria-label="Skor: Milan 2, Roma 1">
+            <span>2</span><span class="sb-score__sep" aria-hidden="true"></span><span class="is-loser">1</span>
+          </p>
+          <p class="sb-score__ht">İlk yarı 2-0</p>
+        </div>
+
+        <div class="sb-team sb-team--away is-loser">
+          <span class="team-crest team-crest--xl crest-roma" aria-hidden="true">ROM</span>
+          <div>
+            <span class="sb-team__role">Deplasman</span>
+            <h2 class="sb-team__name">Roma</h2>
+            <ul class="sb-scorers" aria-label="Roma golleri">
+              <li><svg class="i-ball" aria-hidden="true"><use href="#i-ball"/></svg>Tammy Abraham 72'</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <ul class="hero-facts">
+        <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>18 Kasım 2026</li>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg>22:45</li>
+        <li><svg aria-hidden="true"><use href="#i-stadium"/></svg>San Siro</li>
+        <li><svg aria-hidden="true"><use href="#i-whistle"/></svg><span>Hakem:</span> Daniele Orsato</li>
+      </ul>
+	@await Component.InvokeAsync("_MatchFlowStrip")
+</header>

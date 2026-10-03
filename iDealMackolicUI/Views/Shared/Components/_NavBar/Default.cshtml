@@ -1,0 +1,24 @@
+﻿@{
+	Layout = null;
+	var current = ViewContext.RouteData.Values["controller"]?.ToString();
+	string Active(string name) => current == name ? "sidebar-link is-active" : "sidebar-link";
+}
+<aside class="admin-sidebar" id="admin-sidebar" aria-label="Yönetim menüsü">
+	<a class="sidebar-brand" href="/AdminTeam/Index">
+		<span class="brand-mark" aria-hidden="true">SA</span>
+		<span class="brand-text">Serie A Admin</span>
+	</a>
+	<p class="sidebar-label">Yönetim</p>
+	<ul class="sidebar-nav">
+		<li><a class="@Active("Home")" href="/Home/Index"><svg class="icon" aria-hidden="true"><use href="#i-home" /></svg>Ana Sayfa</a></li>
+		<li><a class="@Active("Match")" href="/Match/MatchList"><svg class="icon" aria-hidden="true"><use href="#i-ball" /></svg>Maçlar</a></li>
+		<li><a class="@Active("AdminTeam")" href="/AdminTeam/Index" aria-current="@(current == "AdminTeam" ? "page" : null)"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg>Takımlar</a></li>
+		<li><a class="sidebar-link" href="/Match/MatchList"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Haftalar</a></li>
+		<li><a class="@Active("League")" href="/League/Index"><svg class="icon" aria-hidden="true"><use href="#i-table" /></svg>Puan Durumu</a></li>
+		<li><a class="sidebar-link" href="#"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg>Kullanıcılar</a></li>
+	</ul>
+	<div class="sidebar-foot">
+		<span class="sidebar-season">Sezon 2026/27</span>
+		<a class="sidebar-link sidebar-link--logout" href="#"><svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>Çıkış Yap</a>
+	</div>
+</aside>

@@ -1,0 +1,19 @@
+@{
+	Layout = null;
+}
+
+<header class="standings-hero">
+      <div class="hero-top">
+        <div>
+          <div class="hero-league"><span class="league-mark" aria-hidden="true">SA</span>İtalya, Serie A</div>
+          <h1 class="hero-title">Serie A Puan Durumu</h1>
+          <p class="hero-subtitle">12. hafta sonunda güncel sıralama, gol dengesi ve son 5 maçlık form durumu.</p>
+        </div>
+        <dl class="hero-meta">
+          <div><dt>Sezon</dt><dd>2026/27</dd></div>
+          <div><dt>Hafta</dt><dd>12</dd></div>
+          <div><dt>Takım sayısı</dt><dd>20</dd></div>
+        </dl>
+      </div>
+	@await Component.InvokeAsync("_PointsLadder")
+</header>

@@ -1,0 +1,10 @@
+@{
+	ViewData["Title"] = "Takim Yönetimi";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@await Component.InvokeAsync("_AdminTeamPageHead")
+@await Component.InvokeAsync("_AdminLeagueStrip")
+@await Component.InvokeAsync("_AdminTeamTable")
+@await Component.InvokeAsync("_AdminTeamModal")
+@await Component.InvokeAsync("_AdminTeamScript")
+
